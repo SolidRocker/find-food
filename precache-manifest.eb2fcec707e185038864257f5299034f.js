@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/find-food/static/js/runtime~main.81ac81fa.js"
   },
   {
-    "revision": "c13467d70966d79428aa",
-    "url": "/find-food/static/js/main.1cb383c6.chunk.js"
+    "revision": "d1b198e387e58d6c23eb",
+    "url": "/find-food/static/js/main.281da1e4.chunk.js"
   },
   {
     "revision": "77a3b0d4edfe83ca9276",
     "url": "/find-food/static/js/2.6a4ac157.chunk.js"
   },
   {
-    "revision": "c13467d70966d79428aa",
+    "revision": "d1b198e387e58d6c23eb",
     "url": "/find-food/static/css/main.3f365d12.chunk.css"
   },
   {
-    "revision": "32a48a1d6d12b7f6777f9e256d0d678e",
+    "revision": "96991994deaa9dfead69a4536a81c9b8",
     "url": "/find-food/index.html"
   }
 ];
