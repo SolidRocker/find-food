@@ -1,0 +1,114 @@
+.filter-section, .filter-section-sp {
+    align-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20vw;
+}
+
+.filter-section-sp {
+    width: 20vw;
+}
+
+.filter-section-header-bg, .filter-section-header-bg-sp {
+    background-color: #14C697;
+    border-radius: 3px;
+    flex: 2 0 100%;
+    margin-right: 2vw;
+    padding-bottom: 2vh;
+}
+
+.filter-section-headerbg {
+    height: 4.5vh;
+}
+
+.filter-section-header-bg-sp {
+    height: 6.5vh;
+}
+
+.filter-section-header {
+    color:rgb(240, 240, 240);
+    flex: 1 0 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    font-weight: bold;
+    order: 1;
+    padding-top: 2vh;
+    padding-left: 2vw;
+}
+
+.filter-section-gap {
+    flex: 2 0 100%;
+    padding-bottom: 3vh;
+}
+
+.filter-list {
+    background-color: #eeeeee;
+    border-radius: 4px;
+    color: #404040;
+    padding: 1vh;
+    width: 80%;
+    order: 5;
+}
+
+.filter-type-dropdown, .filter-data-dropdown {
+    flex: 1 0 80%;
+    font-size: 60%;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding-left: 5%;
+    padding-bottom: 5%;
+}
+
+.Dropdown-menu-type, .Dropdown-menu-type-sp {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    color: #404040;
+    cursor: pointer;
+    min-width: 60px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-top: 1vh;
+    position: absolute;
+    text-align: left;
+    width: 13%;
+}
+
+.Dropdown-menu-type-sp {
+    width: 30%;
+}
+
+.Dropdown-control {
+    color: #404040;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+}
+
+.Dropdown-option {
+    box-sizing: border-box;
+    color: rgba(51, 51, 51, 0.8);
+    cursor: pointer;
+    display: block;
+    font-size: 120%;
+    padding: 10px 10px;
+    padding-left: 1.5vw;
+  }
+
+.Dropdown-option:hover {
+    background-color: #dddddd;
+    color: #333;
+  }
+
+.Dropdown-icon, .Dropdown-icon-sp {
+    position: relative;
+    float: right;
+}
+
+.Dropdown-icon {
+    margin-top: -5%;
+}
+
+.Dropdown-icon-sp {
+    margin-top: -10%;
+}
