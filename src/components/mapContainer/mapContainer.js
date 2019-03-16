@@ -18,9 +18,9 @@ export class MapContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            latitude: 0.0,
-            longitude: 0.0,
-            distance: 0
+            latitude: 1.319190,
+            longitude: 103.857834,
+            distance: 3
         }
     }
 
