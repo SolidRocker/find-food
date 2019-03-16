@@ -2,7 +2,9 @@
   "name": "find-food",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://solidrocker.github.io/find-food/",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "google-maps-react": "^2.0.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -15,6 +17,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

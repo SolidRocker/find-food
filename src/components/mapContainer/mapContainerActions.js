@@ -8,7 +8,8 @@ function hasData(data_) {
 }
 
 export const fetchPlaces = (latitude, longitude, distance,
-                                masterCategoryList, categoryList, zoneList) => dispatch => {
+                                masterCategoryList, categoryList, zoneList
+                            ) => dispatch => {
 
     let path = 'https://appsbytsl.com/API/V1/Nearby/EatBook/tyler03/' + latitude + '/' + longitude + '/' + distance;
     fetch(path)

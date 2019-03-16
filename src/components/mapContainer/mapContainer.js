@@ -18,19 +18,43 @@ export class MapContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            latitude: 1.319190,
-            longitude: 103.857834,
-            distance: 3
+            latitude: 0.0,
+            longitude: 0.0,
+            distance: 0
         }
     }
 
     componentWillMount() {
 
-        let str = window.location.href.split("/");
+        let fullStr = window.location.href.split('?');
+        let varStr = ""
+        
+        if(fullStr.length > 1) {
+            varStr = fullStr[1].split('&');
+        }
+
+        // Set the default values if there is no parameters given.
+        let latStr = 1.319190;
+        let longStr = 103.857834;
+        let distStr = 3;
+
+        // Checks each param name and assign to the correct values.
+        for(var i = 0; i < varStr.length; ++i) {
+            if(varStr[i].substr(0, 3) === "lat") {
+                latStr = varStr[i].substr(4);
+            }
+            if(varStr[i].substr(0, 4) === "long") {
+                longStr = varStr[i].substr(5);
+            }
+            if(varStr[i].substr(0, 4) === "dist") {
+                distStr = varStr[i].substr(5);
+            }
+        }
+
         this.setState({
-            latitude: str[str.length-3],
-            longitude: str[str.length-2],
-            distance: str[str.length-1],
+            latitude: latStr,
+            longitude: longStr,
+            distance: distStr
         }, function() {
             this.props.fetchPlaces(
                 this.state.latitude,
