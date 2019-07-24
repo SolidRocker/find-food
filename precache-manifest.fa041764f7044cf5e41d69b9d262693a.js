@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/find-food/static/css/main.3f365d12.chunk.css"
   },
   {
-    "revision": "1091c6c24a54ee1c9ee7928541e1dfc5",
+    "revision": "2880c1f2f3f34edb053814843a8316f5",
     "url": "/find-food/index.html"
   }
 ];
