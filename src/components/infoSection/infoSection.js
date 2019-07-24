@@ -47,7 +47,7 @@ export class InfoSection extends Component {
 
             switch(infoString) {
 
-                case "EntryDescription":
+                case "desc":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaCommentAlt/> </span>
@@ -56,7 +56,7 @@ export class InfoSection extends Component {
                         </div>
                     )
 
-                case "OpeningHours":
+                case "hours":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaClock/> </span>
@@ -65,7 +65,7 @@ export class InfoSection extends Component {
                         </div>
                     )
 
-                case "ContactNumber":
+                case "contact":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaPhone/> </span>
@@ -74,7 +74,7 @@ export class InfoSection extends Component {
                         </div>
                     )
 
-                case "Website":
+                case "website":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaGlobeAmericas/> </span>
@@ -83,7 +83,7 @@ export class InfoSection extends Component {
                         </div>
                     )
 
-                case "ContactEmail":
+                case "email":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaEnvelope/> </span>
@@ -92,7 +92,7 @@ export class InfoSection extends Component {
                         </div>
                     )
 
-                case "EntryAddress":
+                case "address":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaHome/> </span>
@@ -101,7 +101,7 @@ export class InfoSection extends Component {
                         </div>
                     )
 
-                case "Zone":
+                case "zone":
                     return (
                         <div className="info-section-info">
                             <span className="info-section-icon"> <FaMapMarker/> </span>
@@ -124,43 +124,36 @@ export class InfoSection extends Component {
         var hasFB = false;
         var hasInsta = false;
         var hasTSLArticle = false;
-        var hasTSLReviews = false;
 
-        if(this.props.selectedPlace.hasOwnProperty("EatBookArticle") &&
-            this.props.selectedPlace.EatBookArticle !== "-" &&
-            this.props.selectedPlace.EatBookArticle !== "") {
+        if(this.props.selectedPlace.hasOwnProperty("eatbook") &&
+            this.props.selectedPlace.eatbook !== "-" &&
+            this.props.selectedPlace.eatbook !== "") {
                 hasEatBookArticle = true;
         }
 
-        if(this.props.selectedPlace.hasOwnProperty("FacebookPage") &&
-            this.props.selectedPlace.FacebookPage !== "-" &&
-            this.props.selectedPlace.FacebookPage !== "") {
+        if(this.props.selectedPlace.hasOwnProperty("facebook") &&
+            this.props.selectedPlace.facebook !== "-" &&
+            this.props.selectedPlace.facebook !== "") {
                 hasFB = true;
         }
 
-        if(this.props.selectedPlace.hasOwnProperty("Instagram") &&
-            this.props.selectedPlace.Instagram !== "-" &&
-            this.props.selectedPlace.Instagram !== "") {
+        if(this.props.selectedPlace.hasOwnProperty("instagram") &&
+            this.props.selectedPlace.instagram !== "-" &&
+            this.props.selectedPlace.instagram !== "") {
                 hasInsta = true;
         }
 
-        if(this.props.selectedPlace.hasOwnProperty("TSLArticle") &&
-            this.props.selectedPlace.TSLArticle !== "-" &&
-            this.props.selectedPlace.TSLArticle !== "") {
+        if(this.props.selectedPlace.hasOwnProperty("tsl") &&
+            this.props.selectedPlace.tsl !== "-" &&
+            this.props.selectedPlace.tsl !== "") {
                 hasTSLArticle = true;
-        }
-
-        if(this.props.selectedPlace.hasOwnProperty("TSLReviews") &&
-            this.props.selectedPlace.TSLReviews !== "-" &&
-            this.props.selectedPlace.TSLReviews !== "") {
-                hasTSLReviews = true;
         }
 
         return (
             <div className="info-section-info-sm">
                 {hasEatBookArticle &&
                     <span>
-                        <a href={this.props.selectedPlace.EatBookArticle}>
+                        <a href={this.props.selectedPlace.eatbook}>
                             <img
                                 src={require("../../img/eatbook.png")}
                                 alt={"Eatbook"}
@@ -171,7 +164,7 @@ export class InfoSection extends Component {
                 }
                 {hasFB &&
                     <span>
-                        <a href={this.props.selectedPlace.FacebookPage}>
+                        <a href={this.props.selectedPlace.facebook}>
                             <img
                                 src={require("../../img/facebook.png")}
                                 alt={"Facebook"}
@@ -182,7 +175,7 @@ export class InfoSection extends Component {
                 }
                 {hasInsta &&
                     <span>
-                        <a href={this.props.selectedPlace.Instagram}>
+                        <a href={this.props.selectedPlace.instagram}>
                             <img
                                 src={require("../../img/instagram.png")}
                                 alt={"Instagram"}
@@ -193,21 +186,10 @@ export class InfoSection extends Component {
                 }
                 {hasTSLArticle &&
                     <span>
-                        <a href={this.props.selectedPlace.TSLArticle}>
+                        <a href={this.props.selectedPlace.tsl}>
                             <img
                                 src={require("../../img/thesmartlocal.png")}
                                 alt={"TheSmartLocal Article"}
-                                className="info-section-icon-sm"
-                            /> 
-                        </a>
-                    </span>
-                }
-                {hasTSLReviews &&
-                    <span>
-                        <a href={this.props.selectedPlace.TSLReviews}>
-                            <img
-                                src={require("../../img/star.png")}
-                                alt={"TheSmartLocal Reviews"}
                                 className="info-section-icon-sm"
                             /> 
                         </a>
@@ -223,21 +205,21 @@ export class InfoSection extends Component {
             return (
                 <div className={this.isMobile() ? "info-section-sp" : "info-section"}>
                     <div className="info-section-headerbg">
-                        <div className="info-section-header">{this.props.selectedPlace.EntryName}</div>
-                        <div className="info-section-category">{this.props.selectedPlace.MasterCategory}: {this.props.selectedPlace.Category}</div>
+                        <div className="info-section-header">{this.props.selectedPlace.name}</div>
+                        <div className="info-section-category">{this.props.selectedPlace.master}: {this.props.selectedPlace.category}</div>
                     </div>
 
                     <div className="info-section-gap"></div>
 
-                    {this.renderElements("EntryDescription", this.props.selectedPlace.EntryDescription)}
-                    {this.renderElements("OpeningHours", this.props.selectedPlace.OpeningHours)}
-                    {this.renderElements("ContactNumber", this.props.selectedPlace.ContactNumber)}
+                    {this.renderElements("desc", this.props.selectedPlace.desc)}
+                    {this.renderElements("hours", this.props.selectedPlace.hours)}
+                    {this.renderElements("contact", this.props.selectedPlace.contact)}
 
-                    {this.renderElements("Website", this.props.selectedPlace.Website)}
-                    {this.renderElements("ContactEmail", this.props.selectedPlace.ContactEmail)}
+                    {this.renderElements("website", this.props.selectedPlace.website)}
+                    {this.renderElements("email", this.props.selectedPlace.email)}
 
-                    {this.renderElements("EntryAddress", this.props.selectedPlace.EntryAddress)}
-                    {this.renderElements("Zone", this.props.selectedPlace.Zone)}
+                    {this.renderElements("address", this.props.selectedPlace.address)}
+                    {this.renderElements("zone", this.props.selectedPlace.zone)}
 
                     {this.renderExternalLinks()}
 

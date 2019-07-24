@@ -34,8 +34,8 @@ export class MapContainer extends Component {
         }
 
         // Set the default values if there is no parameters given.
-        let latStr = 1.319190;
-        let longStr = 103.857834;
+        let latStr = 1.350190;
+        let longStr = 103.817834;
         let distStr = 3;
 
         // Checks each param name and assign to the correct values.
@@ -57,9 +57,6 @@ export class MapContainer extends Component {
             distance: distStr
         }, function() {
             this.props.fetchPlaces(
-                this.state.latitude,
-                this.state.longitude,
-                this.state.distance,
                 this.props.masterCategoryList,
                 this.props.categoryList,
                 this.props.zoneList);
@@ -81,27 +78,27 @@ export class MapContainer extends Component {
         if(this.props.hasFilterData) {
 
             if( this.props.filterType === "Master Category" &&
-                this.props.filterData !== place.MasterCategory) {
+                this.props.filterData !== place.master) {
                     return;
             }
 
             if( this.props.filterType === "Category" &&
-                this.props.filterData !== place.Category) {
+                this.props.filterData !== place.category) {
                     return;
             }
 
             if( this.props.filterType === "Zone" &&
-                this.props.filterData !== place.Zone) {
+                this.props.filterData !== place.zone) {
                     return;
             }
         }
 
         return (
             <Marker
-                key={place.EntryID}
-                title={place.EntryName}
-                name={place.EntryName}
-                position={{lat: place.Latitude, lng: place.Longitude}}
+                key={place.id}
+                title={place.name}
+                name={place.name}
+                position={{lat: place.lat, lng: place.long}}
                 placeData={place}
                 onClick={this.onMarkerClick}
             />
@@ -112,7 +109,7 @@ export class MapContainer extends Component {
         return (
             <Map
                 google={this.props.google}
-                zoom={14}
+                zoom={12}
                 style={this.isMobile() ? mapStylesSP : mapStylesPC}
                 initialCenter={{
                     lat: this.state.latitude,
