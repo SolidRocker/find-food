@@ -1,18 +1,17 @@
 {
   "main.css": "/find-food/static/css/main.3f365d12.chunk.css",
-  "main.js": "/find-food/static/js/main.d5dd3a96.chunk.js",
-  "main.js.map": "/find-food/static/js/main.d5dd3a96.chunk.js.map",
+  "main.js": "/find-food/static/js/main.82cdd715.chunk.js",
+  "main.js.map": "/find-food/static/js/main.82cdd715.chunk.js.map",
   "runtime~main.js": "/find-food/static/js/runtime~main.81ac81fa.js",
   "runtime~main.js.map": "/find-food/static/js/runtime~main.81ac81fa.js.map",
-  "static/js/2.6a4ac157.chunk.js": "/find-food/static/js/2.6a4ac157.chunk.js",
-  "static/js/2.6a4ac157.chunk.js.map": "/find-food/static/js/2.6a4ac157.chunk.js.map",
+  "static/js/2.3b66615e.chunk.js": "/find-food/static/js/2.3b66615e.chunk.js",
+  "static/js/2.3b66615e.chunk.js.map": "/find-food/static/js/2.3b66615e.chunk.js.map",
   "index.html": "/find-food/index.html",
-  "precache-manifest.6e3018c472303da7d1ba6f2bb6107f0d.js": "/find-food/precache-manifest.6e3018c472303da7d1ba6f2bb6107f0d.js",
+  "precache-manifest.57de775a01439ddfe0cf104848831950.js": "/find-food/precache-manifest.57de775a01439ddfe0cf104848831950.js",
   "service-worker.js": "/find-food/service-worker.js",
   "static/css/main.3f365d12.chunk.css.map": "/find-food/static/css/main.3f365d12.chunk.css.map",
   "static/media/eatbook.png": "/find-food/static/media/eatbook.43510351.png",
   "static/media/facebook.png": "/find-food/static/media/facebook.4a668b2f.png",
   "static/media/instagram.png": "/find-food/static/media/instagram.5517c24f.png",
-  "static/media/star.png": "/find-food/static/media/star.56e829f8.png",
   "static/media/thesmartlocal.png": "/find-food/static/media/thesmartlocal.29d6ed25.png"
 }
